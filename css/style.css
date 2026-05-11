@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(250, 255, 254);
+    background-color: #f5fbff;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.8;
@@ -9,7 +9,7 @@ body{
     box-sizing: border-box;
 }
 .toplink{
-    background-color: rgb(51, 51, 50);
+    background-color: #1e88e5;
     overflow: hidden;
 }
 .toplink a{
@@ -21,12 +21,12 @@ body{
     padding: 14px 16px;
 }
 .toplink a:hover{
-    background-color: #ffffff;
-    color: rgb(51, 51, 50);
+    background-color: #e3f2fd;
+    color: #1e88e5;
     text-decoration: none;
 }
 .banner{
-    background-color: #5f5e5e;
+    background-color: #64b5f6;
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -39,26 +39,26 @@ body{
 .left_side_bar{
     float: left;
     width: 15%;
-    background-color: #ebebeb;
+    background-color: #e3f2fd;
     padding: 20px;
 }
 .content{
     float: left;
     width: 70%;
-    background-color: #ebebeb;
+    background-color: #ffffff;
     padding: 20px;
     text-align: left;
-    border-left:#5f5e5e 1px dashed;
-    border-right:#5f5e5e 1px dashed;
+    border-left:#90caf9 1px dashed;
+    border-right:#90caf9 1px dashed;
 }
 .right_side_bar{
     float: left;
     width: 15%;
-    background-color: #ebebeb;
+    background-color: #e3f2fd;
     padding: 20px;
 }
 .footer{
-    background-color: rgb(51, 51, 50);
+    background-color: #1e88e5;
     color: #ffffff;
     font-size: small;
     text-align: center;
@@ -67,14 +67,16 @@ body{
 h1{
     /* text-transform: none; */
     text-transform: capitalize;
+    color: #0d47a1;
 }
 h2{
     text-decoration: none;
-    color: #373737;
+    color: #1565c0;
     text-align: left;
 }
 p{
     text-align: justify;
+    color: #333333;
 }
 .underline{
     text-decoration: underline;
@@ -94,7 +96,7 @@ p{
 .team_member{
     text-align: center;
     font-size: small;
-    color: #880f0f;
+    color: #1565c0;
     font-style: italic;
     font-weight: normal;
     display: inline-block;
@@ -106,24 +108,24 @@ p{
 table{
     border-collapse: collapse;
     width: 80%;
-    border: 1px #373737 solid;
+    border: 1px #90caf9 solid;
     border-spacing: 0;
     margin: 0 auto;
 }
 table th{
-    border: 1px #373737 solid;
+    border: 1px #90caf9 solid;
     padding: 8px;
     text-align: left;
-    background-color: #5f5e5e;
+    background-color: #1e88e5;
     color: #ffffff;
 }
 table td{
-    border: 1px #373737 solid;
+    border: 1px #90caf9 solid;
     padding: 8px;
     text-align: left;
 }
 tr:nth-child(even){
-    background-color: #dbdbdb;
+    background-color: #e3f2fd;
 }
 tbody tr:hover{
     background-color: #b3e7ff;
