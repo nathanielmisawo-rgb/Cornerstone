@@ -11,7 +11,8 @@
     <script>
         var name = "Alex Okama";
         // calling the function from the external JavaScript file
-        document.write(greetings(name));
+        var DateTime = new Date(); // current date and time
+        document.write(greetings(name, DateTime));
     </script>
 <p id="dateTime"></p>
 
@@ -126,16 +127,16 @@ var kenyanCities = ["Nairobi", "Mombasa", "Kisumu", "Nakuru", "Eldoret", "Thika"
 <br>
 
 <script>
-    var dateTime = new Date(); // current date and time
-    var hours = dateTime.getHours();
 
-    var weekday = dateTime.getDay(); // output: 0 (Sunday) to 6 (Saturday)
+    var hours = DateTime.getHours();
+
+    var weekday = DateTime.getDay(); // output: 0 (Sunday) to 6 (Saturday)
     // array of weekday indexes
     // { 0:"Sunday", 1:"Monday", 2:"Tuesday", 3:"Wednesday", 4:"Thursday", 5:"Friday", 6:"Saturday"}
     var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var weekdayName = weekdays[weekday]; // get the weekday name
 
-    var month = dateTime.getMonth(); // output: 0 (January) to 11 (December)
+    var month = DateTime.getMonth(); // output: 0 (January) to 11 (December)
     // array of month indexes
     // { 0:"January", 1:"February", 2:"March", 3:"April", 4:"May", 5:"June", 6:"July", 7:"August", 8:"September", 9:"October", 10:"November", 11:"December"}
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -186,10 +187,48 @@ for (var carDetail in car) { // iterating over the car object
     document.write(carDetail + ": " + car[carDetail] + "<br>"); // code to be executed
 }
 
-
 </script>
 <br>
 <br>
+
+<h5>Select the Registration Date</h5>
+
+<select>
+    <script>
+    document.write("<option value=''>" + DateTime.getDate() + " </option>");
+    for (var day = 1; day <= daysInMonths(DateTime); day++) {
+        if(day === DateTime.getDate()) {
+            continue; // Skip the current day
+        }
+        document.write("<option value='" + day + "'>" + day + "</option>");
+    }
+    </script>
+</select>
+<select>
+    <script>
+            document.write("<option value=''>" + months[DateTime.getMonth()] + " </option>");
+        for (var month = 0; month < months.length; month++) {
+            if(month === DateTime.getMonth()) {
+                continue; // Skip the current month
+            }
+            document.write("<option value='" + months[month] + "'>" + months[month] + "</option>");
+        }
+    </script>
+</select>
+<select>
+    <script>
+        var currentYear = new Date().getFullYear();
+        var minYear = currentYear - 10; // Assuming a maximum age of 10 years
+            document.write("<option value=''>" + currentYear + " </option>");
+        for (var year = currentYear; year >= minYear; year--) {
+            if(year === currentYear) {
+                continue; // Skip the current year
+            }
+            document.write("<option value='" + year + "'>" + year + "</option>");
+        }
+    </script>
+</select>
+
 <br>
 <br>
 
